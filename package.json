@@ -1,0 +1,35 @@
+{
+  "name": "classrooms-builder",
+  "version": "0.1.0",
+  "description": "Local-first teacher seating planner (vertical slice)",
+  "main": "./out/main/index.js",
+  "author": "Teacher Tools",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "ELECTRON_RUN_AS_NODE=1 electron node_modules/vitest/vitest.mjs run",
+    "smoke": "node scripts/smoke-e2e.mjs",
+    "postinstall": "electron-rebuild -f -w better-sqlite3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "openai": "^5.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.0",
+    "electron-vite": "^3.1.0",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  }
+}
